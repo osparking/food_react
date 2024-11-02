@@ -7,7 +7,7 @@ export default function Search() {
       console.log("demo called");
     }
     demo();
-  }, []);
+  }, [query]);
   return (
     <div>
       <input
