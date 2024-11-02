@@ -7,7 +7,9 @@ export default function Search() {
   useEffect(
     (e) => {
       function fetchRecipe() {
-        fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
+        const response = fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
+        const recipies = response.json();
+        console.log(recipies);
       }
     },
     [query]
@@ -22,3 +24,4 @@ export default function Search() {
     </div>
   );
 }
+
