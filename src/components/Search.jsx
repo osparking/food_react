@@ -6,9 +6,9 @@ export default function Search() {
   const [query, setQuery] = useState("pasta");
   useEffect(
     (e) => {
-      function fetchRecipe() {
-        const response = fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
-        const recipies = response.json();
+      async function fetchRecipe() {
+        const response = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
+        const recipies = await response.json();
         console.log(recipies);
       }
       fetchRecipe();
@@ -25,4 +25,3 @@ export default function Search() {
     </div>
   );
 }
-
