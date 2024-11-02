@@ -11,6 +11,7 @@ export default function Search() {
         const recipies = response.json();
         console.log(recipies);
       }
+      fetchRecipe();
     },
     [query]
   );
