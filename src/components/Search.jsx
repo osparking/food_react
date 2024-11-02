@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Search() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("pasta");
   return (
     <div>
       <input
