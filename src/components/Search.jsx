@@ -9,7 +9,7 @@ export default function Search() {
       async function fetchRecipe() {
         const response = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
         const recipies = await response.json();
-        console.log(recipies);
+        console.log(recipies.results);
       }
       fetchRecipe();
     },
