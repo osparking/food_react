@@ -7,6 +7,7 @@ export default function Search() {
   useEffect(
     (e) => {
       function fetchRecipe() {
+        fetch(`${URL}?query=${query}&apiKey=${API_KEY}`);
       }
     },
     [query]
