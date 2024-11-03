@@ -1,5 +1,9 @@
 .recipeContainer {
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+  font-family: '문체부 제목 돋음체', sans-serif;
+  color: darkslategray
 }
