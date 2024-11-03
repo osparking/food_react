@@ -7,3 +7,8 @@
   font-family: '문체부 제목 돋음체', sans-serif;
   color: darkslategray
 }
+
+.foodImage {
+  max-width: 100%;
+  height: auto;
+}
