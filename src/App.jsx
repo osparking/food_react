@@ -5,11 +5,11 @@ import RecipeList from "./components/RecipeList";
 import Search from "./components/Search";
 
 function App() {
-  const [recipeData, setRecipeData] = useState([]);
+  const [recipeData, setRecipeData] = useState([""]);
   return (
     <div className="App">
       <Nav />
-      <Search recipeData={recipeData} setRecipeData={setRecipeData} />
+      {/* <Search recipeData={recipeData} setRecipeData={setRecipeData} /> */}
       <RecipeList recipeData={recipeData} />
     </div>
   );
