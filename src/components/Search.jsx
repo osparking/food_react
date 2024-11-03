@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
 
-export default function Search() {
+export default function Search({ recipeData, setRecipeData }) {
   const [query, setQuery] = useState("pasta");
   useEffect(
     (e) => {
@@ -11,6 +11,7 @@ export default function Search() {
         );
         const recipies = await response.json();
         console.log(recipies.results);
+        setRecipeData(recipies.results);
       }
       fetchRecipe();
     },
