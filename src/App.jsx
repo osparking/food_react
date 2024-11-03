@@ -5,7 +5,7 @@ function App() {
   const [recipeData, setRecipeData] = useState([]);
   return (
     <div className="App">
-      <Search />
+      <Search recipeData={recipeData} setRecipeData={setRecipeData} />
     </div>
   );
 }
