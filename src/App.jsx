@@ -9,7 +9,7 @@ import Search from "./components/Search";
 
 function App() {
   const [recipeData, setRecipeData] = useState([]);
-  const [clickedId, setClickedId] = useState("");
+  const [clickedId, setClickedId] = useState("658615");
   return (
     <div className="App">
       <Nav />
