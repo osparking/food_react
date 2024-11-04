@@ -23,3 +23,14 @@
   font-weight: bold;
   color: #393e46;
 }
+
+.viewButton {
+  background-color: #29bb89;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}

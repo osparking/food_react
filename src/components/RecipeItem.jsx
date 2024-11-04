@@ -6,7 +6,7 @@ export default function RecipeItem({ recipe }) {
       <div className={styles.recipeText}>
         <p className={styles.recipeName}>{recipe.title}</p>
       </div>
-      <button onClick={null}>조리법</button>
+      <button className={styles.viewButton} onClick={null}>조리법</button>
       <br />
     </div>
   );
