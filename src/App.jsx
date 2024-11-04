@@ -5,6 +5,7 @@ import InnerContainer from "./components/InnerContainer";
 import Nav from "./components/Nav";
 import RecipeList from "./components/RecipeList";
 import Search from "./components/Search";
+import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
   const [recipeData, setRecipeData] = useState([]);
@@ -15,6 +16,9 @@ function App() {
       <Container>
         <InnerContainer>
           <RecipeList recipeData={recipeData} />
+        </InnerContainer>
+        <InnerContainer>
+          <RecipeDetails/>
         </InnerContainer>
       </Container>
     </div>
