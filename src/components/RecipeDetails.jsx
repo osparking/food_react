@@ -1,3 +1,3 @@
-export default function RecipeDetails() {
-    return <div>상세 조리법</div>
+export default function RecipeDetails({ clickedId }) {
+  return <div>상세 조리법: {clickedId}</div>;
 }
