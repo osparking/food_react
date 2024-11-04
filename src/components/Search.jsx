@@ -4,7 +4,7 @@ import styles from "./search.module.css";
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
 
 export default function Search({ recipeData, setRecipeData }) {
-  const [query, setQuery] = useState("pasta");
+  const [query, setQuery] = useState("pizza");
   useEffect(
     (e) => {
       async function fetchRecipe() {
