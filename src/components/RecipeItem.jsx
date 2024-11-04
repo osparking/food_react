@@ -1,5 +1,5 @@
 import styles from "./recipeitem.module.css";
-export default function RecipeItem({ recipe }) {
+export default function RecipeItem({ recipe, setClickedId }) {
   return (
     <div className={styles.recipeContainer}>
       <img className={styles.foodImage} src={recipe.image} alt={recipe.title} />
@@ -7,7 +7,12 @@ export default function RecipeItem({ recipe }) {
         <p className={styles.recipeName}>{recipe.title}</p>
       </div>
       <div className={styles.buttonContainer}>
-        <button className={styles.viewButton} onClick={null}>
+        <button
+          className={styles.viewButton}
+          onClick={() => {
+            setClickedId(recipe.id);
+          }}
+        >
           조리법
         </button>
       </div>
