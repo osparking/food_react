@@ -34,3 +34,10 @@
   cursor: pointer;
   border-radius: 5px;
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
