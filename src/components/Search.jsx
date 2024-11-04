@@ -15,7 +15,7 @@ export default function Search({ recipeData, setRecipeData }) {
         console.log(recipies.results);
         setRecipeData(recipies.results);
       }
-      // fetchRecipe();
+      fetchRecipe();
     },
     [query]
   );
