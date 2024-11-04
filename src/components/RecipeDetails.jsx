@@ -12,7 +12,7 @@ export default function RecipeDetails({ clickedId }) {
       }
       fetchDetails();
     },
-    []
+    [clickedId]
   );
   return <div>상세 조리법: {clickedId}</div>;
 }
