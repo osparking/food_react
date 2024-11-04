@@ -10,7 +10,9 @@ function App() {
     <div className="App">
       <Nav />
       <Search recipeData={recipeData} setRecipeData={setRecipeData} />
-      <RecipeList recipeData={recipeData} />
+      <Container>
+        <RecipeList recipeData={recipeData} />
+      </Container>
     </div>
   );
 }
