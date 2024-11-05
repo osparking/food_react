@@ -4,6 +4,7 @@ export default function RecipeDetails({ clickedId }) {
   useEffect(
     (e) => {
       async function fetchDetails() {
+        if (clickedId === "") return;
         const response = await fetch(
           `${URL}?apiKey=${import.meta.env.VITE_API_KEY}`
         );
