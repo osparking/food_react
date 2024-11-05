@@ -9,11 +9,15 @@ import Search from "./components/Search";
 
 function App() {
   const [recipeData, setRecipeData] = useState([]);
-  const [clickedId, setClickedId] = useState("658615");
+  const [clickedId, setClickedId] = useState("");
   return (
     <div className="App">
       <Nav />
-      <Search recipeData={recipeData} setRecipeData={setRecipeData} />
+      <Search
+        setClickedId={setClickedId}
+        recipeData={recipeData}
+        setRecipeData={setRecipeData}
+      />
       <Container>
         <InnerContainer>
           <RecipeList setClickedId={setClickedId} recipeData={recipeData} />
