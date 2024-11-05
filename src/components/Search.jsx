@@ -3,7 +3,7 @@ import styles from "./search.module.css";
 
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
 
-export default function Search({ recipeData, setRecipeData }) {
+export default function Search({ recipeData, setRecipeData, setClickedId }) {
   const [query, setQuery] = useState("pizza");
   useEffect(
     (e) => {
@@ -14,6 +14,9 @@ export default function Search({ recipeData, setRecipeData }) {
         const recipies = await response.json();
         console.log(recipies.results);
         setRecipeData(recipies.results);
+        if (recipies.results.length > 0) {
+          setClickedId(recipies.results[0].id);
+        }
       }
       fetchRecipe();
     },
