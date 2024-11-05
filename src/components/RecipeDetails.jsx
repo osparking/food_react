@@ -3,6 +3,7 @@ import details from "../local/details";
 export default function RecipeDetails({ clickedId }) {
   const URL = `https://api.spoonacular.com/recipes/${clickedId}/information`;
   const [reDetails, setReDetails] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(
     (e) => {
       async function fetchDetails() {
@@ -11,7 +12,9 @@ export default function RecipeDetails({ clickedId }) {
         //   `${URL}?apiKey=${import.meta.env.VITE_API_KEY}`
         // );
         // const recipeDetails = await response.json();
-        details && (setReDetails(details), console.log("디테일: ", details));
+        (await details) &&
+          (setReDetails(details), console.log("디테일: ", details));
+        setIsLoading(false);
       }
       fetchDetails();
     },
@@ -44,11 +47,15 @@ export default function RecipeDetails({ clickedId }) {
           </div>
           <div>
             <h3>조리 단계</h3>
-            <ul>
-              {reDetails.analyzedInstructions[0].steps.map((step) => (
-                <li key={step.number}>{step.step}</li>
-              ))}
-            </ul>
+            {isLoading ? (
+              <p>⌛자료 적재 중...</p>
+            ) : (
+              <ul>
+                {reDetails.analyzedInstructions[0].steps.map((step) => (
+                  <li key={step.number}>{step.step}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       )}
