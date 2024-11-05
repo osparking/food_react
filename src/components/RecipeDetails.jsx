@@ -13,6 +13,7 @@ export default function RecipeDetails({ clickedId }) {
         const recipeDetails = await response.json();
         recipeDetails &&
           (setReDetails(recipeDetails), console.log("디테일: ", recipeDetails));
+        setIsLoading(false);
         console.log(recipeDetails);
       }
       fetchDetails();
