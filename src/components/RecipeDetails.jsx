@@ -47,11 +47,15 @@ export default function RecipeDetails({ clickedId }) {
           </div>
           <div>
             <h3>조리 단계</h3>
-            <ul>
-              {reDetails.analyzedInstructions[0].steps.map((step) => (
-                <li key={step.number}>{step.step}</li>
-              ))}
-            </ul>
+            {isLoading ? (
+              <p>⌛자료 적재 중...</p>
+            ) : (
+              <ul>
+                {reDetails.analyzedInstructions[0].steps.map((step) => (
+                  <li key={step.number}>{step.step}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       )}
