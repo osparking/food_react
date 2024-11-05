@@ -10,6 +10,8 @@ export default function RecipeDetails({ clickedId }) {
           `${URL}?apiKey=${import.meta.env.VITE_API_KEY}`
         );
         const recipeDetails = await response.json();
+        recipeDetails &&
+          (setReDetails(recipeDetails), console.log("디테일: ", recipeDetails));
         console.log(recipeDetails);
       }
       fetchDetails();
