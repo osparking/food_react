@@ -22,7 +22,7 @@ export default function RecipeDetails({ clickedId }) {
       {reDetails && (
         <div>
           <div>
-            {reDetails.title}
+            <h2>{reDetails.title}</h2>
             <img src={reDetails.image} alt={reDetails.title} />
           </div>
           <div>
@@ -38,7 +38,9 @@ export default function RecipeDetails({ clickedId }) {
             <span>{reDetails.vegan ? "🥬완전채식" : ""}</span>
           </div>
           <div>
-            <span>가격: ₩{Math.round(reDetails.pricePerServing * 1300 / 100)}/1인</span>
+            <span>
+              가격: ₩{Math.round((reDetails.pricePerServing * 1300) / 100)}/1인
+            </span>
           </div>
         </div>
       )}
