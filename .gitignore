@@ -1,3 +1,5 @@
+# local data
+local/
 # security 
 .env
 # Logs
