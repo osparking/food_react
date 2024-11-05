@@ -1,5 +1,6 @@
 # local data
 local/
+**/images/
 # security 
 .env
 # Logs
