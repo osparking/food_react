@@ -7,7 +7,7 @@ import RecipeDetails from "./components/RecipeDetails";
 import RecipeList from "./components/RecipeList";
 
 function App() {
-  const [recipeData, setRecipeData] = useState([""]);
+  const [recipeData, setRecipeData] = useState([]);
   const [clickedId, setClickedId] = useState("");
   return (
     <div className="App">

@@ -1,13 +1,11 @@
 import styles from "./recipeitem.module.css";
-import pizzaPumpkin from './images/pizza-pumpkin.jpg'
-export default function RecipeItem({ recipe, setClickedId }) {
-  const recipeTitle = "피자와 단호박";
+export default function RecipeItem({ setClickedId, recipe }) {
   return (
     <div className={styles.recipeContainer}>
-      {/* <img className={styles.foodImage} src={recipe.image} alt={recipe.title} /> */}
-      <img className={styles.foodImage} src={pizzaPumpkin} alt={recipeTitle} />
+      <img className={styles.foodImage} src={recipe.image} alt={recipe.title} />
+
       <div className={styles.recipeText}>
-        <p className={styles.recipeName}>{recipeTitle}</p>
+        <p className={styles.recipeName}>{recipe.title}</p>
       </div>
       <div className={styles.buttonContainer}>
         <button
