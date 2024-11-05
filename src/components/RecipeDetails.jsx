@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import details from "../local/details.json";
+import details from "../local/details";
 
 export default function RecipeDetails({ clickedId }) {
   const URL = `https://api.spoonacular.com/recipes/${clickedId}/information`;
