@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./search.module.css";
+import recipes from '../local/recipes.json'
 
 const URL = "https://api.spoonacular.com/recipes/complexSearch";
 
@@ -8,10 +9,11 @@ export default function Search({ recipeData, setRecipeData, setClickedId }) {
   useEffect(
     (e) => {
       async function fetchRecipe() {
-        const response = await fetch(
-          `${URL}?query=${query}&apiKey=${import.meta.env.VITE_API_KEY}`
-        );
-        const recipies = await response.json();
+        // const response = await fetch(
+        //   `${URL}?query=${query}&apiKey=${import.meta.env.VITE_API_KEY}`
+        // );
+        // const recipies = await response.json();
+        const recipies = recipes;
         console.log(recipies.results);
         setRecipeData(recipies.results);
         if (recipies.results.length > 0) {
