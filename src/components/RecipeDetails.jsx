@@ -19,13 +19,29 @@ export default function RecipeDetails({ clickedId }) {
   );
   return (
     <div>
-      {reDetails.title && (
+      {reDetails && (
         <div>
-          {reDetails.title}
-          <img src={reDetails.image} alt={reDetails.title} />
+          <div>
+            {reDetails.title}
+            <img src={reDetails.image} alt={reDetails.title} />
+          </div>
+          <div>
+            <span>
+              <strong>⏰{reDetails.cookingMinutes}분</strong>
+            </span>
+            &nbsp;
+            <span>
+              <strong>👨‍👩‍👧‍👦{reDetails.servings}인분</strong>
+            </span>
+            &nbsp;
+            <span>{reDetails.vegetarian ? "🥕채식가" : "🍖일반용"}</span>&nbsp;
+            <span>{reDetails.vegan ? "🥬완전채식" : ""}</span>
+          </div>
+          <div>
+            <span>가격: ₩{Math.round(reDetails.pricePerServing * 1300 / 100)}/1인</span>
+          </div>
         </div>
       )}
-      <div>상세 조리법: {clickedId}</div>
     </div>
   );
 }
