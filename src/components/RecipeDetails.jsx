@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 export default function RecipeDetails({ clickedId }) {
   const URL = `https://api.spoonacular.com/recipes/${clickedId}/information`;
+  const [reDetails, setReDetails] = useState({});
   useEffect(
     (e) => {
       async function fetchDetails() {
