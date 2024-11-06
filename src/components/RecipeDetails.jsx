@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import details from "../local/details";
+import styles from "./recipeDetails.module.css";
 export default function RecipeDetails({ clickedId }) {
   const URL = `https://api.spoonacular.com/recipes/${clickedId}/information`;
   const [reDetails, setReDetails] = useState({});
@@ -23,7 +24,7 @@ export default function RecipeDetails({ clickedId }) {
   return (
     <div>
       {reDetails && (
-        <div>
+        <div className={styles.recipeCard}>
           <h1>{reDetails.title}</h1>
           <img src={reDetails.image} alt={reDetails.title} />
           <div>
@@ -46,16 +47,17 @@ export default function RecipeDetails({ clickedId }) {
           <h2>조리 단계</h2>
           <div>
             <ol>
-            {isLoading ? (
-              <p>⌛자료 적재 중...</p>
-            ) : (              
+              {isLoading ? (
+                <p>⌛자료 적재 중...</p>
+              ) : (
                 reDetails.analyzedInstructions[0].steps.map((step) => (
                   <li key={step.number}>{step.step}</li>
-                ))             
-            )}
+                ))
+              )}
             </ol>
           </div>
-        </div>)}
+        </div>
+      )}
     </div>
   );
 }
