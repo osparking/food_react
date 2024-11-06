@@ -33,7 +33,7 @@ export default function RecipeDetails({ clickedId }) {
               alt={reDetails.title}
             />
           </div>
-          <div>
+          <div className={styles.recipeProps}>
             <span>
               <strong>⏰{reDetails.cookingMinutes}분</strong>
             </span>
