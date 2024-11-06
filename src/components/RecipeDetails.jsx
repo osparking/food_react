@@ -26,7 +26,7 @@ export default function RecipeDetails({ clickedId }) {
       {reDetails && (
         <div className="styles.recipeCard">
           <div>
-            <h2>{reDetails.title}</h2>
+            <h1 className={styles.recipeTitle}>{reDetails.title}</h1>
             <img src={reDetails.image} alt={reDetails.title} />
           </div>
           <div>
