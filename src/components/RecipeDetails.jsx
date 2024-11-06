@@ -50,8 +50,8 @@ export default function RecipeDetails({ clickedId }) {
               가격: ₩{Math.round((reDetails.pricePerServing * 1300) / 100)}/1인
             </span>
           </div>
-          <div>
-            <h2>조리 단계</h2>
+          <h2>조리 단계</h2>
+          <div className={styles.cookSteps}>
             <ol>
               {isLoading ? (
                 <p>⌛자료 적재 중...</p>
