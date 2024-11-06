@@ -26,7 +26,11 @@ export default function RecipeDetails({ clickedId }) {
       {reDetails && (
         <div className={styles.recipeCard}>
           <h1 className={styles.recipeTitle}>{reDetails.title}</h1>
-          <img className={styles.recipeImage} src={reDetails.image} alt={reDetails.title} />
+          <img
+            className={styles.recipeImage}
+            src={reDetails.image}
+            alt={reDetails.title}
+          />
           <div className={styles.recipeProps}>
             <span>
               <strong>⏰{reDetails.cookingMinutes}분</strong>
@@ -45,7 +49,7 @@ export default function RecipeDetails({ clickedId }) {
             </span>
           </div>
           <h2>조리 단계</h2>
-          <div>
+          <div className={styles.cookSteps}>
             <ol>
               {isLoading ? (
                 <p>⌛자료 적재 중...</p>
