@@ -46,16 +46,16 @@ export default function RecipeDetails({ clickedId }) {
             </span>
           </div>
           <div>
-            <h3>조리 단계</h3>
-            {isLoading ? (
-              <p>⌛자료 적재 중...</p>
-            ) : (
-              <ul>
-                {reDetails.analyzedInstructions[0].steps.map((step) => (
+            <h2>조리 단계</h2>
+            <ol>
+              {isLoading ? (
+                <p>⌛자료 적재 중...</p>
+              ) : (
+                reDetails.analyzedInstructions[0].steps.map((step) => (
                   <li key={step.number}>{step.step}</li>
-                ))}
-              </ul>
-            )}
+                ))
+              )}
+            </ol>
           </div>
         </div>
       )}
