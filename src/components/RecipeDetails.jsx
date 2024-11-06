@@ -27,7 +27,7 @@ export default function RecipeDetails({ clickedId }) {
         <div className={styles.recipeCard}>
           <h1 className={styles.recipeTitle}>{reDetails.title}</h1>
           <img className={styles.recipeImage} src={reDetails.image} alt={reDetails.title} />
-          <div>
+          <div className={styles.recipeProps}>
             <span>
               <strong>⏰{reDetails.cookingMinutes}분</strong>
             </span>
