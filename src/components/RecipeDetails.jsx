@@ -58,6 +58,22 @@ export default function RecipeDetails({ clickedId }) {
               </strong>
             </span>
           </div>
+          <h2>음식 재료</h2>
+          <div>
+            {isLoading ? (
+              <p>⌛자료 적재 중...</p>
+            ) : (
+              reDetails.extendedIngredients.map((ingredient) => (
+                <div key={ingredient.id}>
+                  <img src={ingredient.image} alt={ingredient.image} />
+                  <h3>{ingredient.name}</h3>
+                  <h3>
+                    {ingredient.amount} {ingredient.unit}{" "}
+                  </h3>
+                </div>
+              ))
+            )}
+          </div>
           <h2>조리 단계</h2>
           <div className={styles.cookSteps}>
             <ol>
