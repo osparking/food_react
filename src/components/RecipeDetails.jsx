@@ -24,10 +24,8 @@ export default function RecipeDetails({ clickedId }) {
     <div>
       {reDetails && (
         <div>
-          <div>
-            <h2>{reDetails.title}</h2>
-            <img src={reDetails.image} alt={reDetails.title} />
-          </div>
+          <h1>{reDetails.title}</h1>
+          <img src={reDetails.image} alt={reDetails.title} />
           <div>
             <span>
               <strong>⏰{reDetails.cookingMinutes}분</strong>
@@ -45,20 +43,19 @@ export default function RecipeDetails({ clickedId }) {
               가격: ₩{Math.round((reDetails.pricePerServing * 1300) / 100)}/1인
             </span>
           </div>
+          <h2>조리 단계</h2>
           <div>
-            <h3>조리 단계</h3>
+            <ol>
             {isLoading ? (
               <p>⌛자료 적재 중...</p>
-            ) : (
-              <ul>
-                {reDetails.analyzedInstructions[0].steps.map((step) => (
+            ) : (              
+                reDetails.analyzedInstructions[0].steps.map((step) => (
                   <li key={step.number}>{step.step}</li>
-                ))}
-              </ul>
+                ))             
             )}
+            </ol>
           </div>
-        </div>
-      )}
+        </div>)}
     </div>
   );
 }
