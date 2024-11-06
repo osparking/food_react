@@ -32,3 +32,11 @@
   border-radius: 5px;
   color: #75746c;
 }
+
+.cookSteps ol {
+  margin-left: 0;
+}
+
+.cookSteps li {
+  margin: 10px 0;
+}
