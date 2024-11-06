@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from './recipeDetails.module.css'
+import styles from "./recipeDetails.module.css";
 export default function RecipeDetails({ clickedId }) {
   const URL = `https://api.spoonacular.com/recipes/${clickedId}/information`;
   const [reDetails, setReDetails] = useState({});
@@ -27,7 +27,11 @@ export default function RecipeDetails({ clickedId }) {
         <div className="styles.recipeCard">
           <div>
             <h1 className={styles.recipeTitle}>{reDetails.title}</h1>
-            <img src={reDetails.image} alt={reDetails.title} />
+            <img
+              className={styles.recipeImage}
+              src={reDetails.image}
+              alt={reDetails.title}
+            />
           </div>
           <div>
             <span>
