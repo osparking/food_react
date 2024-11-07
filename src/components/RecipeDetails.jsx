@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import details from "../local/details";
+import Ingredient from "./Ingredient";
 import styles from "./recipeDetails.module.css";
 export default function RecipeDetails({ clickedId }) {
   const URL = `https://api.spoonacular.com/recipes/${clickedId}/information`;
@@ -62,19 +63,7 @@ export default function RecipeDetails({ clickedId }) {
               <p>⌛자료 적재 중...</p>
             ) : (
               reDetails.extendedIngredients.map((ingredient) => (
-                <div key={ingredient.id}>
-                  <img
-                    src={
-                      `https://img.spoonacular.com/ingredients_100x100/` +
-                      ingredient.image
-                    }
-                    alt={ingredient.image}
-                  />
-                  <h3>{ingredient.name}</h3>
-                  <h3>
-                    {ingredient.amount} {ingredient.unit}{" "}
-                  </h3>
-                </div>
+                <Ingredient ingredient={ingredient} />
               ))
             )}
           </div>
