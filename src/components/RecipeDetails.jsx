@@ -63,7 +63,7 @@ export default function RecipeDetails({ clickedId }) {
               <p>⌛자료 적재 중...</p>
             ) : (
               reDetails.extendedIngredients.map((ingredient) => (
-                <Ingredient ingredient={ingredient} />
+                <Ingredient ingredient={ingredient} key={ingredient.id} />
               ))
             )}
           </div>

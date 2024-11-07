@@ -1,6 +1,6 @@
 export default function Ingredient({ ingredient }) {
   return (
-    <div key={ingredient.id}>
+    <div>
       <img
         src={
           `https://img.spoonacular.com/ingredients_100x100/` + ingredient.image
