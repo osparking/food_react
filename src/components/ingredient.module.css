@@ -11,3 +11,9 @@
     height: 100px;
     border-radius: 10px;
 }
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
